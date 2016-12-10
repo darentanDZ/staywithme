@@ -35,6 +35,7 @@ public class LocationActivity extends AppCompatActivity {
             @Override
             public void onToggleSwitchChangeListener(int position, boolean isChecked) {
                 // Write your code ...
+                System.out.println(position);
                 switch(position) {
                     case 0:
                         addressText.setVisibility(View.VISIBLE);
@@ -52,6 +53,7 @@ public class LocationActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent l = new Intent(getBaseContext(), ConfirmationActivity.class);
+                l.putExtra("Address", addressText.getText().toString());
                 startActivity(l);
             }
         });
