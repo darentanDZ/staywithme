@@ -59,7 +59,7 @@
         fbutton:shadowEnabled="true"
         fbutton:shadowHeight="3dp"
         fbutton:cornerRadius="4dp"
-        android:layout_marginBottom="42dp"
+        android:layout_marginBottom="40dp"
         android:layout_alignParentBottom="true" />
 
 </RelativeLayout>

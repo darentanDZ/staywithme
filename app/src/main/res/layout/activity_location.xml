@@ -5,7 +5,9 @@
     android:id="@+id/activity_location"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.staywithme.staywithme.LocationActivity">
+    tools:context="com.staywithme.staywithme.LocationActivity"
+    android:background="@drawable/bg"
+    xmlns:fbutton="http://schemas.android.com/apk/res-auto"  >
 
     <belka.us.androidtoggleswitch.widgets.ToggleSwitch
         android:layout_width="wrap_content"
@@ -21,32 +23,49 @@
         custom:inactiveTextColor="@android:color/white"
         custom:separatorColor="@color/gray_very_light"/>
 
-    <TextView
-        android:text="Location"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/locationLabel"
-        android:layout_alignBottom="@+id/locationSwitch"
-        android:layout_alignParentStart="true"
-        android:textSize="24sp"
-        android:paddingLeft="10dp" />
-
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="text"
-        android:ems="10"
+        android:textSize="24sp"
         android:id="@+id/locationText"
         android:layout_centerVertical="true"
         android:layout_alignParentStart="true"
-        android:visibility="invisible" />
+        android:visibility="invisible"
+        android:layout_marginLeft="48dp"
+        android:layout_marginRight="48dp"
+        android:textAlignment="center" />
 
-    <Button
-        android:text="Next"
+    <TextView
+        android:text="Triggered Location."
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:id="@+id/locationLabel"
+        android:textSize="30sp"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="55dp"
-        android:id="@+id/nextButton" />
+        android:textAlignment="center"
+        android:layout_gravity="center"
+        android:layout_marginTop="54dp"
+        android:layout_marginLeft="48dp"
+        android:layout_marginRight="48dp" />
+
+    <info.hoang8f.widget.FButton
+        android:text="Next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:id="@+id/nextButton"
+        android:layout_weight="0.05"
+        android:layout_marginLeft="48dp"
+        android:layout_marginRight="48dp"
+        android:textSize="25sp"
+        fbutton:buttonColor="@color/colorPrimary"
+        fbutton:shadowColor="@color/colorShadow"
+        fbutton:shadowEnabled="true"
+        fbutton:shadowHeight="3dp"
+        fbutton:cornerRadius="4dp"
+        android:layout_marginBottom="56dp"
+        android:layout_alignParentBottom="true" />
+
 </RelativeLayout>
