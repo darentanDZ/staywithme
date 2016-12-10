@@ -1,9 +1,11 @@
 package com.staywithme.staywithme;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.VideoView;
 
@@ -34,5 +36,14 @@ public class ConfirmationActivity extends AppCompatActivity {
         mVideoView.start();
         mVideoView.pause();
 
+        Button next_btn = (Button) this.findViewById(R.id.submitButton);
+
+        next_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent m = new Intent(getBaseContext(), ViewMessageActivity.class);
+                startActivity(m);
+            }
+        });
     }
 }

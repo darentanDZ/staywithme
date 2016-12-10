@@ -2,15 +2,19 @@ package com.staywithme.staywithme;
 
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TimePicker;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+
+import static com.staywithme.staywithme.R.id.next_btn;
 
 public class DateTimeActivity extends AppCompatActivity {
 
@@ -37,6 +41,15 @@ public class DateTimeActivity extends AppCompatActivity {
         dateText.setText(dateFormat.format(current.getTime()));
         timeText.setText(cHour + ":" + cMinute);
 
+        Button next_btn = (Button) this.findViewById(R.id.next_button);
+
+        next_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent k = new Intent(getBaseContext(), LocationActivity.class);
+                startActivity(k);
+            }
+        });
 //        Intent i = new Intent(FromActivity.this, ToActivity.class);
 //        startActivity(i);
 
