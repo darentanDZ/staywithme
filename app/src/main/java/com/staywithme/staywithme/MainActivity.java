@@ -220,32 +220,34 @@ public class MainActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+//        setContentView(R.layout.activity_main);
 
-        mImageView = (ImageView) findViewById(R.id.taken_photo);
-        mVideoView = (VideoView) findViewById(R.id.video_view);
-        mImageBitmap = null;
-        mVideoUri = null;
+//        mImageView = (ImageView) findViewById(R.id.taken_photo);
+//        mVideoView = (VideoView) findViewById(R.id.video_view);
+//        mImageBitmap = null;
+//        mVideoUri = null;
+//
+//        Button photoBtn = (Button) findViewById(R.id.click);
+//        setBtnListenerOrDisable(
+//                photoBtn,
+//                mTakePicOnClickListener,
+//                MediaStore.ACTION_IMAGE_CAPTURE
+//        );
 
-        Button photoBtn = (Button) findViewById(R.id.click);
-        setBtnListenerOrDisable(
-                photoBtn,
-                mTakePicOnClickListener,
-                MediaStore.ACTION_IMAGE_CAPTURE
-        );
-
-        Button videoBtn = (Button) findViewById(R.id.record_video);
-        setBtnListenerOrDisable(
-                videoBtn,
-                mTakeVidOnClickListener,
-                MediaStore.ACTION_VIDEO_CAPTURE
-        );
+//        Button videoBtn = (Button) findViewById(R.id.record_video);
+//        setBtnListenerOrDisable(
+//                videoBtn,
+//                mTakeVidOnClickListener,
+//                MediaStore.ACTION_VIDEO_CAPTURE
+//        );
 
         mAlbumStorageDirFactory = new BaseAlbumDirFactory();
 
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(this, new String[] { Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE }, 0);
         }
+
+        dispatchTakeVideoIntent();
     }
 
     @Override
