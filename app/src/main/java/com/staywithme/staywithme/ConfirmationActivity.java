@@ -34,7 +34,7 @@ public class ConfirmationActivity extends AppCompatActivity {
 
         mVideoView.setVideoURI(MainActivity.mVideoUri);
         mVideoView.start();
-        mVideoView.pause();
+//        mVideoView.pause();
 
         Button next_btn = (Button) this.findViewById(R.id.submitButton);
 

@@ -13,18 +13,22 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0.05"
-        android:paddingLeft="20dp"
-        android:paddingTop="20dp"
-        android:text="Find Contacts"
+        android:layout_marginLeft="48dp"
+        android:layout_marginRight="48dp"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:paddingTop="40dp"
+        android:text="Who do you intend to speak with?"
         android:textSize="30sp" />
 
     <Spinner
         android:id="@+id/contact_spinner"
         android:layout_width="match_parent"
-        android:layout_height="50sp"
+        android:layout_height="50dp"
         android:layout_weight="0.10"
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp"
+        android:layout_marginLeft="48dp"
+        android:layout_marginRight="48dp"
+        android:layout_gravity="center"
         android:spinnerMode="dialog" />
 
     <LinearLayout
@@ -38,11 +42,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_weight="0.05"
         android:id="@+id/next_btn"
         android:layout_marginLeft="48dp"
         android:layout_marginRight="48dp"
-        android:textSize="18sp"
+        android:textSize="25sp"
         fbutton:buttonColor="@color/colorPrimary"
         fbutton:shadowColor="@color/colorShadow"
         fbutton:shadowEnabled="true"

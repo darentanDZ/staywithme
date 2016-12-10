@@ -9,15 +9,19 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.staywithme.staywithme.DateTimeActivity"
-    android:background="@drawable/bg">
+    android:background="@drawable/bg"
+    xmlns:fbutton="http://schemas.android.com/apk/res-auto" >
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="When the message will be seen by Cucu"
+        android:text="When the message will be seen by Cucu."
+        android:textAlignment="center"
         android:textSize="30sp"
-        android:paddingLeft="20dp"
-        android:paddingTop="20dp" />
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_gravity="center"
+        android:paddingTop="38dp" />
 
     <EditText
         android:layout_height="wrap_content"
@@ -40,12 +44,22 @@
         android:onClick="datePicker"
         android:focusable="false" />
 
-    <Button
+    <info.hoang8f.widget.FButton
         android:text="Next"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/next_button" />
+        android:layout_gravity="center"
+        android:id="@+id/next_button"
+        android:layout_weight="0.05"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:textSize="25sp"
+        fbutton:buttonColor="@color/colorPrimary"
+        fbutton:shadowColor="@color/colorShadow"
+        fbutton:shadowEnabled="true"
+        fbutton:shadowHeight="3dp"
+        fbutton:cornerRadius="4dp"
+        android:layout_marginBottom="42dp"
+        android:layout_alignParentBottom="true" />
 
 </RelativeLayout>

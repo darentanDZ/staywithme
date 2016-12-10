@@ -273,6 +273,7 @@ public class MainActivity extends ActionBarActivity {
             case ACTION_TAKE_VIDEO: {
                 if (resultCode == RESULT_OK) {
 //                    handleCameraVideo(data);
+                    mVideoUri = data.getData();
                     Intent i = new Intent(this, SearchContactActivity.class);
                     startActivity(i);
                 }
