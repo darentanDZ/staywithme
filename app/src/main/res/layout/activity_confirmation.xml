@@ -8,80 +8,103 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.staywithme.staywithme.ConfirmationActivity">
+    tools:context="com.staywithme.staywithme.ConfirmationActivity"
+    android:background="@drawable/bg"
+    xmlns:fbutton="http://schemas.android.com/apk/res-auto" >
 
     <VideoView
         android:layout_width="wrap_content"
         android:layout_centerHorizontal="true"
         android:id="@+id/videoView"
         android:layout_alignParentTop="true"
-        android:layout_height="200dp" />
+        android:layout_height="200dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp" />
 
-    <Button
-        android:text="Submit"
-        android:layout_width="wrap_content"
+    <info.hoang8f.widget.FButton
+        android:text="Confirm"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="41dp"
-        android:id="@+id/submitButton" />
+        android:layout_gravity="center"
+        android:id="@+id/submitButton"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:textSize="25sp"
+        fbutton:buttonColor="@color/colorPrimary"
+        fbutton:shadowColor="@color/colorShadow"
+        fbutton:shadowEnabled="true"
+        fbutton:shadowHeight="3dp"
+        fbutton:cornerRadius="4dp"
+        android:layout_marginBottom="40dp"
+        android:layout_alignParentBottom="true" />
 
     <EditText
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:ems="11"
+        android:textSize="24sp"
         android:id="@+id/locationText"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_above="@+id/submitButton"
         android:layout_alignParentEnd="true"
-        android:layout_marginBottom="28dp" />
+        android:layout_marginBottom="44dp"
+        android:layout_marginRight="32dp"/>
 
     <EditText
-        android:layout_width="match_parent"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:inputType="time"
-        android:ems="6"
+        android:textSize="24sp"
         android:id="@+id/timeText"
-        android:layout_marginBottom="22dp"
+        android:layout_marginBottom="44dp"
         android:layout_above="@+id/locationLabel"
-        android:layout_alignStart="@+id/locationText" />
+        android:layout_alignStart="@+id/locationText"
+        android:layout_marginRight="32dp" />
 
     <EditText
-        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="date"
-        android:ems="8"
+        android:textSize="24sp"
         android:id="@+id/dateText"
+        android:layout_marginRight="32dp"
+        android:layout_width="200dp"
         android:layout_centerVertical="true"
-        android:layout_alignStart="@+id/timeText" />
-
-    <TextView
-        android:text="Date :"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/dateLabel"
-        android:textSize="22sp"
-        android:layout_alignBaseline="@+id/dateText"
-        android:layout_alignBottom="@+id/dateText"
-        android:layout_alignStart="@+id/timeLabel" />
+        android:layout_marginStart="28dp"
+        android:layout_alignEnd="@+id/timeText" />
 
     <TextView
         android:text="Location :"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/locationLabel"
-        android:textSize="22sp"
+        android:textSize="18sp"
         android:layout_alignBaseline="@+id/locationText"
         android:layout_alignBottom="@+id/locationText"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="32dp" />
 
     <TextView
         android:text="Time :"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/timeLabel"
-        android:textSize="22sp"
+        android:textSize="18sp"
         android:layout_alignBaseline="@+id/timeText"
         android:layout_alignBottom="@+id/timeText"
-        android:layout_alignEnd="@+id/locationLabel" />
+        android:layout_alignEnd="@+id/locationLabel"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="32dp" />
+
+    <TextView
+        android:text="Date :"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/dateLabel"
+        android:textSize="18sp"
+        android:layout_marginLeft="32dp"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="30dp"
+        android:layout_alignEnd="@+id/timeLabel" />
+
 </RelativeLayout>

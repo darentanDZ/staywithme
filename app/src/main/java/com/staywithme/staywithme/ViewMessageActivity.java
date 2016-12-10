@@ -24,9 +24,6 @@ import local.org.apache.http.impl.client.HttpClients;
 
 public class ViewMessageActivity extends AppCompatActivity {
 
-    private String PATH_TO_FILE;
-    private static final String TAG = "MainActivity";
-
     public ViewMessageActivity() throws UnirestException {
     }
 
@@ -39,7 +36,7 @@ public class ViewMessageActivity extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        thread.start();
+        //thread.start();
 
     }
 
