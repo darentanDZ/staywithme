@@ -33,6 +33,7 @@
         <activity android:name=".DateTimeActivity" />
         <activity android:name=".VideoActivity" />
         <activity android:name=".SearchContactActivity"/>
+        <activity android:name=".LocationActivity"/>
     </application>
 
 </manifest>
