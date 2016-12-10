@@ -11,4 +11,20 @@
     android:background="@drawable/bg"
     tools:context="com.staywithme.staywithme.ViewMessageActivity">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="You got a message from your Grandpa."
+        android:textSize="20sp"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/envelope"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="100dp"/>
+
 </RelativeLayout>
