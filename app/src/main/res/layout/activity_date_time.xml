@@ -11,6 +11,14 @@
     tools:context="com.staywithme.staywithme.DateTimeActivity"
     android:background="@drawable/bg">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="When the message will be seen by Cucu"
+        android:textSize="30sp"
+        android:paddingLeft="20dp"
+        android:paddingTop="20dp" />
+
     <EditText
         android:layout_height="wrap_content"
         android:ems="6"
