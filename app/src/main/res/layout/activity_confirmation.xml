@@ -17,46 +17,6 @@
         android:layout_alignParentTop="true"
         android:layout_height="200dp" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="date"
-        android:ems="8"
-        android:layout_below="@+id/videoView"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="63dp"
-        android:id="@+id/dateText" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="time"
-        android:ems="6"
-        android:id="@+id/timeText"
-        android:layout_alignBottom="@+id/dateText"
-        android:layout_alignParentEnd="true"
-        android:layout_alignTop="@+id/dateText" />
-
-    <EditText
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="11"
-        android:layout_marginTop="43dp"
-        android:id="@+id/locationText"
-        android:layout_width="wrap_content"
-        android:layout_below="@+id/dateText"
-        android:layout_alignParentEnd="true" />
-
-    <TextView
-        android:text="Location :"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/locationLabel"
-        android:textSize="24sp"
-        android:layout_alignBaseline="@+id/locationText"
-        android:layout_alignBottom="@+id/locationText"
-        android:layout_alignParentStart="true" />
-
     <Button
         android:text="Submit"
         android:layout_width="wrap_content"
@@ -65,4 +25,63 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="41dp"
         android:id="@+id/submitButton" />
+
+    <EditText
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="11"
+        android:id="@+id/locationText"
+        android:layout_width="wrap_content"
+        android:layout_above="@+id/submitButton"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="28dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="time"
+        android:ems="6"
+        android:id="@+id/timeText"
+        android:layout_marginBottom="22dp"
+        android:layout_above="@+id/locationLabel"
+        android:layout_alignStart="@+id/locationText" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:ems="8"
+        android:id="@+id/dateText"
+        android:layout_centerVertical="true"
+        android:layout_alignStart="@+id/timeText" />
+
+    <TextView
+        android:text="Date :"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/dateLabel"
+        android:textSize="22sp"
+        android:layout_alignBaseline="@+id/dateText"
+        android:layout_alignBottom="@+id/dateText"
+        android:layout_alignStart="@+id/timeLabel" />
+
+    <TextView
+        android:text="Location :"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/locationLabel"
+        android:textSize="22sp"
+        android:layout_alignBaseline="@+id/locationText"
+        android:layout_alignBottom="@+id/locationText"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Time :"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/timeLabel"
+        android:textSize="22sp"
+        android:layout_alignBaseline="@+id/timeText"
+        android:layout_alignBottom="@+id/timeText"
+        android:layout_alignEnd="@+id/locationLabel" />
 </RelativeLayout>

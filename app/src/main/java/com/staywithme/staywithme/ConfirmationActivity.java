@@ -23,14 +23,17 @@ public class ConfirmationActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_confirmation);
 
+        Bundle bundle = getIntent().getExtras();
+        String address = bundle.getString("Address");
+
         mVideoView = (VideoView) findViewById(R.id.videoView);
         dateText = (EditText) findViewById(R.id.dateText);
         timeText = (EditText) findViewById(R.id.timeText);
         locationText = (EditText) findViewById(R.id.locationText);
 
-//        dateText.setText();
-//        timeText.setText(cHour + ":" + cMinute);
-//        locationText.setText();
+        dateText.setText(DateTimeActivity.dateString);
+        timeText.setText(DateTimeActivity.timeString);
+        locationText.setText(address);
 
         mVideoView.setVideoURI(MainActivity.mVideoUri);
         mVideoView.start();

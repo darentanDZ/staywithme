@@ -20,6 +20,8 @@ public class DateTimeActivity extends AppCompatActivity {
 
     private EditText dateText;
     private EditText timeText;
+    public static String dateString;
+    public static String timeString;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,8 +40,15 @@ public class DateTimeActivity extends AppCompatActivity {
         timeText = (EditText) findViewById(R.id.timeText);
 
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MMM-yyyy");
-        dateText.setText(dateFormat.format(current.getTime()));
-        timeText.setText(cHour + ":" + cMinute);
+        dateString = dateFormat.format(current.getTime());
+        dateText.setText(dateString);
+
+        if(cHour > 12) {
+            timeString = cHour + ":" + cMinute + " PM";
+        }else {
+            timeString = cHour + ":" + cMinute + " AM";
+        }
+        timeText.setText(timeString);
 
         Button next_btn = (Button) this.findViewById(R.id.next_button);
 
@@ -105,7 +114,8 @@ public class DateTimeActivity extends AppCompatActivity {
                                 month = "Dec";
                                 break;
                         }
-                        dateText.setText(dayOfMonth + "-" + month + "-" + year);
+                        dateString = dayOfMonth + "-" + month + "-" + year;
+                        dateText.setText(dateString);
                     }
                 }, mYear, mMonth, mDay);
         dpd.show();
@@ -122,11 +132,16 @@ public class DateTimeActivity extends AppCompatActivity {
                     public void onTimeSet(TimePicker timePicker, int i, int i1) {
                         String hour = "";
                         String minute = "";
+                        Boolean checkHour = false;
 
                         if(i < 10) {
                             hour = "0" + i;
                         }else {
-                            hour = String.valueOf(i);
+                            int value =  i - 12;
+                            hour = String.valueOf(value);
+                        }
+                        if( i > 12) {
+                            checkHour = true;
                         }
 
                         if(i1 < 10) {
@@ -134,7 +149,14 @@ public class DateTimeActivity extends AppCompatActivity {
                         }else {
                             minute = String.valueOf(i1);
                         }
-                        timeText.setText(hour + ":" + minute);
+
+                        if(checkHour) {
+                            timeString = hour + ":" + minute + " PM";
+                        }else {
+                            timeString = hour + ":" + minute + " AM";
+                        }
+
+                        timeText.setText(timeString);
                     }
 
                 }, mHour, mMinute, false);
