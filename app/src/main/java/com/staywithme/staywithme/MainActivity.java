@@ -41,7 +41,7 @@ public class MainActivity extends ActionBarActivity {
     private static final String VIDEO_STORAGE_KEY = "viewvideo";
     private static final String VIDEOVIEW_VISIBILITY_STORAGE_KEY = "videoviewvisibility";
     private VideoView mVideoView;
-    private Uri mVideoUri;
+    public static Uri mVideoUri;
 
     private String mCurrentPhotoPath;
 
@@ -272,7 +272,9 @@ public class MainActivity extends ActionBarActivity {
 
             case ACTION_TAKE_VIDEO: {
                 if (resultCode == RESULT_OK) {
-                    handleCameraVideo(data);
+//                    handleCameraVideo(data);
+                    Intent i = new Intent(this, SearchContactActivity.class);
+                    startActivity(i);
                 }
                 break;
             } // ACTION_TAKE_VIDEO
