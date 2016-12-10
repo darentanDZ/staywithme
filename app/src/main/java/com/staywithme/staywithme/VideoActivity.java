@@ -24,7 +24,8 @@ public class VideoActivity extends AppCompatActivity {
         decorView.setSystemUiVisibility(uiOptions);
 
         VideoView mVideoView = (VideoView) findViewById(R.id.video_view);
-        mVideoView.setVideoURI(Uri.parse("android.resource://" + getPackageName() +"/"+R.raw.testvideo));
+        //mVideoView.setVideoURI(Uri.parse("android.resource://" + getPackageName() +"/"+R.raw.testvideo));
+        mVideoView.setVideoURI(MainActivity.mVideoUri);
         mVideoView.setMediaController(new MediaController(this));
         mVideoView.requestFocus();
         mVideoView.start();

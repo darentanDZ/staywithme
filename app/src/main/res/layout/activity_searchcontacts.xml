@@ -6,7 +6,8 @@
     android:orientation="vertical"
     android:weightSum="1"
     android:background="@drawable/bg"
-    tools:context=".SearchContactActivity">
+    tools:context=".SearchContactActivity"
+    xmlns:fbutton="http://schemas.android.com/apk/res-auto">
 
     <TextView
         android:layout_width="match_parent"
@@ -31,11 +32,22 @@
         android:layout_height="wrap_content"
         android:layout_weight="0.80"></LinearLayout>
 
-    <Button
-        android:layout_width="wrap_content"
+
+    <info.hoang8f.widget.FButton
+        android:text="Next"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_weight="0.05"
         android:id="@+id/next_btn"
-        android:text="Next" />
+        android:layout_marginLeft="48dp"
+        android:layout_marginRight="48dp"
+        android:textSize="18sp"
+        fbutton:buttonColor="@color/colorPrimary"
+        fbutton:shadowColor="@color/colorShadow"
+        fbutton:shadowEnabled="true"
+        fbutton:shadowHeight="3dp"
+        fbutton:cornerRadius="4dp"
+        android:layout_marginBottom="40dp" />
+
 </LinearLayout>

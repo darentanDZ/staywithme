@@ -40,6 +40,7 @@ dependencies {
 
 
     compile 'com.mashape.unirest:unirest-android:1.0+'
+    compile 'info.hoang8f:fbutton:1.0.5'
 }
 
 
