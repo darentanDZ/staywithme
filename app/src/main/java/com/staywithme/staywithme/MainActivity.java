@@ -41,7 +41,7 @@ public class MainActivity extends ActionBarActivity {
     private static final String VIDEO_STORAGE_KEY = "viewvideo";
     private static final String VIDEOVIEW_VISIBILITY_STORAGE_KEY = "videoviewvisibility";
     private VideoView mVideoView;
-    private Uri mVideoUri;
+    public static Uri mVideoUri;
 
     private String mCurrentPhotoPath;
 
