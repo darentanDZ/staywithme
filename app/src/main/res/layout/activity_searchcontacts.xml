@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1"
+    tools:context=".SearchContactActivity">
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Find Contacts"
+    android:textSize="30sp"
+    android:paddingTop="20dp"
+    android:paddingLeft="20dp"
+    android:layout_weight="0.05"/>
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        android:layout_weight="0.10"
+        android:id="@+id/contact_spinner"
+        android:spinnerMode="dialog"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"/>
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_weight="0.80">
+</LinearLayout>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        android:layout_gravity="center"
+        android:layout_weight="0.05"/>
+</LinearLayout>
