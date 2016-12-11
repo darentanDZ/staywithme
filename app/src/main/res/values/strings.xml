@@ -3,4 +3,5 @@
     <string name="title_activity_view_message">ViewMessageActivity</string>
     <string name="album_name">StayWithMe</string>
     <string name="cannot">Nonono</string>
+    <string name="title_activity_splash_screen">SplashScreen</string>
 </resources>

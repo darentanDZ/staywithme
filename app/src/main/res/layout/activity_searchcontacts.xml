@@ -24,12 +24,14 @@
     <Spinner
         android:id="@+id/contact_spinner"
         android:layout_width="match_parent"
+        android:layout_marginTop="40dp"
         android:layout_height="50dp"
         android:layout_weight="0.10"
         android:layout_marginLeft="48dp"
         android:layout_marginRight="48dp"
         android:layout_gravity="center"
-        android:spinnerMode="dialog" />
+        android:spinnerMode="dialog"
+        android:background="@null"/>
 
     <LinearLayout
         android:layout_width="wrap_content"

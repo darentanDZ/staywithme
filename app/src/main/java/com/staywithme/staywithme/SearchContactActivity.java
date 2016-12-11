@@ -1,6 +1,8 @@
 package com.staywithme.staywithme;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.PorterDuff;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -12,8 +14,8 @@ import android.widget.Spinner;
 
 public class SearchContactActivity extends AppCompatActivity {
 
-    public static String[] nameList = {"Ampang", "Cheras Balakong", "Cheras Leisure Mall", "Damansara Uptown", "Kajang", "Kepong", "Klang Bukit Raja AEON", "Klang Bukit Tinggi", "Mahkota Cheras"};
-    public static String[] phoneList = {"03-42178269", "03-90748103", "03-91301810", "03-42178269", "03-90748103", "03-91301810", "03-42178269", "03-90748103", "03-91301810"};
+    public static String[] nameList = {"Tony Stark", "Scarlett Johansson", "Bruce Banner", "Clark Kent", "Alfred Pennyworth", "Chris Hemsworth", "Bruce Wayne", "Lex Luthor", "Louis Lane"};
+    public static String[] phoneList = {"013-42178269", "016-90748103", "011-91301810", "012-42178269", "017-90748103", "019-91301810", "012-42178269", "013-90748103", "016-91301810"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

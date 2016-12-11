@@ -37,7 +37,7 @@ dependencies {
     //API
     compile 'com.squareup.okhttp3:okhttp:3.5.0'
     compile 'com.android.support:support-v4:25.0.1'
-
+    compile 'com.jaredrummler:material-spinner:1.1.0'
 
     compile 'com.mashape.unirest:unirest-android:1.0+'
     compile 'info.hoang8f:fbutton:1.0.5'
